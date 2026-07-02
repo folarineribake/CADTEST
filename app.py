@@ -384,14 +384,6 @@ div[data-testid="stFileUploadDropzone"] {
     border-radius: 3px !important;
 }
 
-.stSlider > div { padding-top: 4px !important; }
-
-[data-testid="stSlider"] label {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 0.82rem !important;
-    color: #4A5568 !important;
-}
-
 .stSuccess, .stError, .stWarning {
     border-radius: 3px !important;
     font-family: 'Inter', sans-serif !important;
@@ -548,7 +540,7 @@ st.markdown("""
       <div class="nodac-fullname">Nodule Detection and Classification System</div>
     </div>
     <div class="nodac-byline">
-      <div class="nodac-author">DA-SILVA Anthony Oluwapelumi &nbsp;·&nbsp; 190410008</div>
+      <div class="nodac-author">DA-SILVA Anthony Oluwafemi &nbsp;·&nbsp; 190410008</div>
       <div class="nodac-meta">B.Sc Biomedical Engineering &nbsp;·&nbsp; Supervisor: Prof. O. Adeleye</div>
       <div class="nodac-uni">University of Lagos, Akoka</div>
     </div>
@@ -594,17 +586,9 @@ uploaded_zip = st.file_uploader(
     label_visibility="collapsed"
 )
 
-col_thresh, col_btn = st.columns([3, 1])
-with col_thresh:
-    threshold = st.slider(
-        "Detection threshold",
-        min_value=0.30, max_value=0.90,
-        value=0.50, step=0.05,
-        help="Slices scoring above this value are forwarded to Stage 2 classification"
-    )
-with col_btn:
-    st.markdown("<br>", unsafe_allow_html=True)
-    run_btn = st.button("Run Analysis →", disabled=uploaded_zip is None)
+threshold = 0.50  # fixed detection threshold (Stage 1 → Stage 2 cutoff)
+
+run_btn = st.button("Run Analysis →", disabled=uploaded_zip is None)
 
 st.markdown('</div>', unsafe_allow_html=True)
 
