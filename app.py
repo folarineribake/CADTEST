@@ -536,7 +536,7 @@ st.markdown("""
 <div class="nodacs-header">
   <div class="nodacs-header-inner">
     <div>
-      <div class="nodacs-wordmark">NOD<span>AC</span></div>
+      <div class="nodacs-wordmark">NOD<span>ACS</span></div>
       <div class="nodacs-fullname">Nodule Detection and Classification System</div>
     </div>
     <div class="nodacs-byline">
