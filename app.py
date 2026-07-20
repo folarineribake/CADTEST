@@ -9,7 +9,7 @@ import zipfile
 from PIL import Image
 
 st.set_page_config(
-    page_title="NODAC — Nodule Detection and Classification",
+    page_title="NODACS — Nodule Detection and Classification",
     page_icon="🫁",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -30,14 +30,14 @@ html, body, [class*="css"] {
 .stApp { background-color: #F4F6F9; }
 
 /* ── Header ── */
-.nodac-header {
+.nodacs-header {
     background: #ffffff;
     border-bottom: 1px solid #D8E0EA;
     padding: 0;
     margin-bottom: 0;
 }
 
-.nodac-header-inner {
+.nodacs-header-inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 24px 32px 20px;
@@ -46,7 +46,7 @@ html, body, [class*="css"] {
     justify-content: space-between;
 }
 
-.nodac-wordmark {
+.nodacs-wordmark {
     font-family: 'DM Sans', sans-serif;
     font-size: 2.4rem;
     font-weight: 600;
@@ -55,11 +55,11 @@ html, body, [class*="css"] {
     line-height: 1;
 }
 
-.nodac-wordmark span {
+.nodacs-wordmark span {
     color: #00897B;
 }
 
-.nodac-fullname {
+.nodacs-fullname {
     font-family: 'Inter', sans-serif;
     font-size: 0.72rem;
     font-weight: 400;
@@ -69,24 +69,24 @@ html, body, [class*="css"] {
     margin-top: 4px;
 }
 
-.nodac-byline {
+.nodacs-byline {
     text-align: right;
     font-family: 'Inter', sans-serif;
 }
 
-.nodac-author {
+.nodacs-author {
     font-size: 0.82rem;
     font-weight: 500;
     color: #1A2332;
 }
 
-.nodac-meta {
+.nodacs-meta {
     font-size: 0.72rem;
     color: #8A96A3;
     margin-top: 2px;
 }
 
-.nodac-uni {
+.nodacs-uni {
     font-size: 0.7rem;
     color: #0B4F8A;
     font-weight: 500;
@@ -137,7 +137,7 @@ html, body, [class*="css"] {
 }
 
 /* ── Main content ── */
-.nodac-main {
+.nodacs-main {
     max-width: 1200px;
     margin: 32px auto;
     padding: 0 32px;
@@ -533,16 +533,16 @@ def make_bar_chart(det_scores, threshold, nodule_groups):
 
 # ── Header ────────────────────────────────────────────────────
 st.markdown("""
-<div class="nodac-header">
-  <div class="nodac-header-inner">
+<div class="nodacs-header">
+  <div class="nodacs-header-inner">
     <div>
-      <div class="nodac-wordmark">NOD<span>AC</span></div>
-      <div class="nodac-fullname">Nodule Detection and Classification System</div>
+      <div class="nodacs-wordmark">NOD<span>AC</span></div>
+      <div class="nodacs-fullname">Nodule Detection and Classification System</div>
     </div>
-    <div class="nodac-byline">
-      <div class="nodac-author">DA-SILVA Anthony Oluwapelumi &nbsp;·&nbsp; 190410008</div>
-      <div class="nodac-meta">B.Sc Biomedical Engineering &nbsp;·&nbsp; Supervisor: Prof. O. Adeleye</div>
-      <div class="nodac-uni">University of Lagos, Akoka</div>
+    <div class="nodacs-byline">
+      <div class="nodacs-author">DA-SILVA Anthony Oluwapelumi &nbsp;·&nbsp; 190410008</div>
+      <div class="nodacs-meta">B.Sc Biomedical Engineering &nbsp;·&nbsp; Supervisor: Prof. O. Adeleye</div>
+      <div class="nodacs-uni">University of Lagos, Akoka</div>
     </div>
   </div>
 </div>
@@ -572,7 +572,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Upload section ────────────────────────────────────────────
-st.markdown('<div class="nodac-main">', unsafe_allow_html=True)
+st.markdown('<div class="nodacs-main">', unsafe_allow_html=True)
 st.markdown('<div class="section-label">CT Scan Upload</div>', unsafe_allow_html=True)
 st.markdown('<div class="upload-card">', unsafe_allow_html=True)
 st.markdown("""<p class="upload-instruction">
@@ -706,7 +706,7 @@ if run_btn and uploaded_zip:
 
     st.markdown("""
     <div class="disclaimer">
-      <strong>Clinical Notice:</strong> NODAC is a computer-aided detection tool intended to assist,
+      <strong>Clinical Notice:</strong> NODACS is a computer-aided detection tool intended to assist,
       not replace, clinical radiological assessment. All findings must be reviewed and confirmed
       by a qualified radiologist before any clinical decision is made. Final diagnosis remains
       under physician supervision.
